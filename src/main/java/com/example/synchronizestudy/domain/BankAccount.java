@@ -25,4 +25,9 @@ public class BankAccount {
         this.balance += balance;
     }
 
+
+    public Long getbalance() {
+        return balance;
+    }
+
 }
