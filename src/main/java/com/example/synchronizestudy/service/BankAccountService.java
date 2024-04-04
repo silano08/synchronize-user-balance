@@ -22,7 +22,7 @@ public class BankAccountService {
     public Long getBalance(Long id){
         // 잔고 내역 조회
         BankAccount balance = bankAccountRepository.findByIdWithOptimisticLock(id);
-        return balance.getbalance();
+        return balance.getBalance();
     }
 
     @Transactional

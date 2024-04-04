@@ -13,6 +13,16 @@ public class BankAccount {
     @Version
     private Long version;
 
+    public BankAccount(Long id, Long balance, Long version) {
+        this.id = id;
+        this.balance = balance;
+        this.version = version;
+    }
+
+    public BankAccount() {
+
+    }
+
     public void decrease(Long balance){
         if (this.balance - balance < 0) {
             throw new RuntimeException("계좌 잔고가 모자랍니다.");
@@ -26,8 +36,15 @@ public class BankAccount {
     }
 
 
-    public Long getbalance() {
+    public Long getBalance() {
         return balance;
     }
 
+    public void setBalance(Long balance) {
+        this.balance = balance;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
