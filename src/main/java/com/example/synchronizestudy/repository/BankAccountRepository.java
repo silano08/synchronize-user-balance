@@ -7,12 +7,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import javax.persistence.LockModeType;
+import java.util.Optional;
 
 public interface BankAccountRepository extends JpaRepository<BankAccount,Long> {
 
     @Lock(value = LockModeType.OPTIMISTIC)
     @Query("select s from BankAccount s where s.id = :id")
-    BankAccount findByIdWithOptimisticLock(Long id);
+    Optional<BankAccount> findByIdWithOptimisticLock(Long id);
 
 
     @Lock(LockModeType.PESSIMISTIC_WRITE)

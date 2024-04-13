@@ -18,7 +18,7 @@ import java.util.concurrent.Executors;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@ActiveProfiles("test")
+//@ActiveProfiles("test")
 class BalanceFacadeTest {
 
     @Autowired
